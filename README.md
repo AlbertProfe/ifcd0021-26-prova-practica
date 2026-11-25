@@ -129,7 +129,7 @@ Heu d’iniciar sessió amb un compte de Google. Feu servir els camps existents 
    `MF05_PP_Nom_Cognom1_Cognom2-1.zip`  
    (exemple: `MF05_PP_Emma_Alonso_McCoy-1.zip`).
 
-El treball de l’activitat 4 (REST i Postman) és a la branca `backend` i, per tant, al zip `MF01-04_…`. L’enllaç de Postman va al Markdown de `doc/` d’aquesta branca, no al formulari ni al full.
+El treball de l’activitat 4 (REST i Postman) és a la branca `backend` i, per tant, al zip `MF01-04_…`. El treball de l’activitat 5 (React) és a la branca `frontend` i, per tant, al zip `MF05_…`. L’enllaç de Postman va al Markdown de `doc/` d’aquesta branca, no al formulari ni al full.
 
 No feu servir els camps d’**Avaluació Continuada** per pujar els zips d’aquesta prova.
 
