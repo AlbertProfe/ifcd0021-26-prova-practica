@@ -33,7 +33,7 @@ Per treballar el frontend (activitat 5):
 git checkout frontend
 ```
 
-Feu commits a cada branca amb els vostres canvis. Si en algún moment no veieu les branques, creeu-les vosaltres des de `master`:
+Feu commits a cada branca amb els vostres canvis. Si en algun moment no veieu les branques, creeu-les vosaltres des de `master`:
 
 ```bash
 git checkout master
@@ -65,14 +65,14 @@ npm run dev
 
 ### Activitat 1 (MF01) — Git: branques i `git archive`
 
-Treballeu a les branques `backend` i `frontend` (deixeu `master` amb l’esquelet). Al final, des de l’arrel del repositori, genereu els dos zips:
+Treballeu a les branques `backend` i `frontend` (deixeu `master` amb l’esquelet). Abans de generar els zips, creeu a cada branca la carpeta `doc/` (vegeu més avall). Al final, des de l’arrel del repositori, genereu els dos zips amb el format dels formularis. Exemple (canvieu `Emma_Alonso_McCoy` pel vostre `Nom_Cognom1_Cognom2`, sense accents):
 
 ```bash
-git archive --format=zip -o Cognom_backend.zip backend
-git archive --format=zip -o Cognom_frontend.zip frontend
+git archive --format=zip -o MF01-03_PP_Emma_Alonso_McCoy-1.zip backend
+git archive --format=zip -o MF04-05_PP_Emma_Alonso_McCoy-1.zip frontend
 ```
 
-Canvieu `Cognom` pel vostre primer cognom, sense espais ni accents (exemple: `Romero_backend.zip`).
+El `-1` del final forma part del format del formulari. Si només teniu un cognom, useu `Nom_Cognom-1`.
 
 **Pregunta (amb les vostres paraules):** Per què els equips fan servir branques en lloc de treballar tots a `main` (o `master`)?
 
@@ -84,13 +84,13 @@ A `boot/`, creeu les classes `Teacher`, `Student` i `Enrollment`, i un servei am
 
 ### Activitat 3 (MF03) — Entitats JPA i relacions
 
-Convertite les classes en entitats JPA. `Enrollment` ha de ser una `@Entity` pròpia, amb dos `@ManyToOne` (cap a `Teacher` i cap a `Student`) i un camp extra (assignatura, data o similar). Creeu els repositoris (`JpaRepository` n’hi ha prou; no calen consultes pròpies). Expliqueu per què feu servir una entitat `Enrollment` i no un `@ManyToMany` amb `@JoinTable`.
+Convertiu les classes en entitats JPA. `Enrollment` ha de ser una `@Entity` pròpia, amb dos `@ManyToOne` (cap a `Teacher` i cap a `Student`) i un camp extra (assignatura, data o similar). Creeu els repositoris (`JpaRepository` n’hi ha prou; no calen consultes pròpies). Expliqueu per què feu servir una entitat `Enrollment` i no un `@ManyToMany` amb `@JoinTable`.
 
 **Pregunta (amb les vostres paraules):** Expliqueu una relació `@OneToMany` amb un exemple d’una aplicació real.
 
 ### Activitat 4 (MF04) — API REST i Postman
 
-Creeu el controlador REST i connecteu-lo al servei, amb endpoints per a les matrícules (enrollments). Proveu l’API amb Postman. Lliureu l’**enllaç públic** de la col·lecció de Postman: escriviu-lo al full de la prova i també al `README` de la branca `backend`.
+Creeu el controlador REST i connecteu-lo al servei, amb endpoints per a les matrícules (enrollments). Proveu l’API amb Postman. Poseu l’**enllaç públic** de la col·lecció de Postman al fitxer Markdown de la carpeta `doc/` de la branca `backend` (juntament amb captures, si en teniu). No l’escriviu al full de la prova.
 
 **Pregunta (amb les vostres paraules):** Què és el cicle de petició i resposta (*request/response*)? Expliqueu què passa des del client fins a la base de dades i tornada.
 
@@ -100,17 +100,30 @@ A `react/`, creeu un component que mostri l’array de matrícules importat de `
 
 **Pregunta (amb les vostres paraules):** Què és la immutabilitat a React, i per què no s’ha de canviar l’estat directament?
 
+## Carpeta `doc/` a cada branca
+
+A cada branca de treball (`backend` i `frontend`) heu de crear vosaltres una carpeta `doc/` a l’arrel del repositori, amb un fitxer Markdown (per exemple `doc/exercicis.md`) i les captures o imatges de les activitats. Aquesta carpeta no ve amb l’esquelet: creeu-la vosaltres.
+
+- A la branca `backend`: notes i captures del backend (API, Postman, model) i, obligatòriament, l’enllaç públic de la col·lecció de Postman.
+- A la branca `frontend`: notes i captures del component React.
+
+No escriviu l’enllaç de Postman al full de la prova. Feu el commit de `doc/` a cada branca abans de generar els zips, perquè quedi dins de l’arxiu.
+
 ## Com lliurar el treball
 
-Heu d’iniciar sessió amb un compte de Google. Hi ha dos formularis (el mateix esquema que a l’avaluació contínua d’aquest curs):
+Heu d’iniciar sessió amb un compte de Google. Feu servir els camps existents de **Prova Pràctica** de cada formulari (no canvieu el nom dels zips: han de seguir el format del camp):
 
 1. **MF01-02-03:** https://forms.gle/rkAXo279ktYZcMC27  
-   Al camp de pujada de la **Prova Pràctica** (o el camp etiquetat MF01-02-03), pugeu `Cognom_backend.zip`.
+   Al camp **MF01-02-03-Prova_Pràctica**, pugeu el zip de la branca `backend`, amb el nom  
+   `MF01-03_PP_Nom_Cognom1_Cognom2-1.zip`  
+   (exemple: `MF01-03_PP_Emma_Alonso_McCoy-1.zip`).
 
 2. **MF04-05:** https://forms.gle/Tyf6cw2JsTZaZxb88  
-   Al camp de pujada de la **Prova Pràctica** (o el camp etiquetat MF04-05), pugeu `Cognom_frontend.zip`.
+   Al camp **MF04-05-Prova_Pràctica**, pugeu el zip de la branca `frontend`, amb el nom  
+   `MF04-05_PP_Nom_Cognom1_Cognom2-1.zip`  
+   (exemple: `MF04-05_PP_Emma_Alonso_McCoy-1.zip`).
 
-L’enllaç públic de Postman (activitat 4) no té un camp propi al formulari: poseu-lo al full de la prova i al README de la branca `backend`.
+El treball de l’activitat 4 (REST i Postman) és a la branca `backend` i, per tant, al zip `MF01-03_…`. L’enllaç de Postman va al Markdown de `doc/` d’aquesta branca, no al formulari ni al full.
 
 No feu servir els camps d’**Avaluació Continuada** per pujar els zips d’aquesta prova.
 
