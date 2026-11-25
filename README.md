@@ -74,8 +74,8 @@ npm run dev
 Treballeu a les branques `backend` i `frontend` (deixeu `master` amb l’esquelet). Abans de generar els zips, creeu a cada branca la carpeta `doc/` (vegeu més avall). Al final, des de l’arrel del repositori, genereu els dos zips amb el format dels formularis. Exemple (canvieu `Emma_Alonso_McCoy` pel vostre `Nom_Cognom1_Cognom2`, sense accents):
 
 ```bash
-git archive --format=zip -o MF01-03_PP_Emma_Alonso_McCoy-1.zip backend
-git archive --format=zip -o MF04-05_PP_Emma_Alonso_McCoy-1.zip frontend
+git archive --format=zip -o MF01-04_PP_Emma_Alonso_McCoy-1.zip backend
+git archive --format=zip -o MF05_PP_Emma_Alonso_McCoy-1.zip frontend
 ```
 
 El `-1` del final forma part del format del formulari. Si només teniu un cognom, useu `Nom_Cognom-1`.
@@ -119,17 +119,17 @@ No escriviu l’enllaç de Postman al full de la prova. Feu el commit de `doc/` 
 
 Heu d’iniciar sessió amb un compte de Google. Feu servir els camps existents de **Prova Pràctica** de cada formulari (no canvieu el nom dels zips: han de seguir el format del camp):
 
-1. **MF01-02-03:** https://forms.gle/rkAXo279ktYZcMC27  
-   Al camp **MF01-02-03-Prova_Pràctica**, pugeu el zip de la branca `backend`, amb el nom  
-   `MF01-03_PP_Nom_Cognom1_Cognom2-1.zip`  
-   (exemple: `MF01-03_PP_Emma_Alonso_McCoy-1.zip`).
+1. **MF01-04:** https://forms.gle/rkAXo279ktYZcMC27  
+   Al camp **MF01-04-Prova_Pràctica**, pugeu el zip de la branca `backend`, amb el nom  
+   `MF01-04_PP_Nom_Cognom1_Cognom2-1.zip`  
+   (exemple: `MF01-04_PP_Emma_Alonso_McCoy-1.zip`).
 
-2. **MF04-05:** https://forms.gle/Tyf6cw2JsTZaZxb88  
-   Al camp **MF04-05-Prova_Pràctica**, pugeu el zip de la branca `frontend`, amb el nom  
-   `MF04-05_PP_Nom_Cognom1_Cognom2-1.zip`  
-   (exemple: `MF04-05_PP_Emma_Alonso_McCoy-1.zip`).
+2. **MF05:** https://forms.gle/Tyf6cw2JsTZaZxb88  
+   Al camp **MF05-Prova_Pràctica**, pugeu el zip de la branca `frontend`, amb el nom  
+   `MF05_PP_Nom_Cognom1_Cognom2-1.zip`  
+   (exemple: `MF05_PP_Emma_Alonso_McCoy-1.zip`).
 
-El treball de l’activitat 4 (REST i Postman) és a la branca `backend` i, per tant, al zip `MF01-03_…`. L’enllaç de Postman va al Markdown de `doc/` d’aquesta branca, no al formulari ni al full.
+El treball de l’activitat 4 (REST i Postman) és a la branca `backend` i, per tant, al zip `MF01-04_…`. L’enllaç de Postman va al Markdown de `doc/` d’aquesta branca, no al formulari ni al full.
 
 No feu servir els camps d’**Avaluació Continuada** per pujar els zips d’aquesta prova.
 
