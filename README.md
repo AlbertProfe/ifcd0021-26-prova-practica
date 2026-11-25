@@ -1,0 +1,123 @@
+# Prova pràctica IFCD0021-26
+
+Curs: **26/CIFO/FSE/809/0197720/075 — Fullstack Júnior web developer amb JAVA**
+
+Data i horari: **27/11/2026, 08:30–12:30 (4 hores)**
+
+Aquest repositori és l’esquelet de partida. No comenceu el projecte de zero. Cloneu-lo, treballeu a les branques indicades i lliureu els dos zips pels formularis de Google.
+
+## Contingut del repositori
+
+- `boot/` — projecte **Spring Boot** (Maven, Java 21, H2). És on feu les activitats 2, 3 i 4 (MF02, MF03 i MF04).
+- `react/` — projecte **Vite + React**. És on feu l’activitat 5 (MF05).
+- La branca `master` guarda només l’esquelet inicial. **No hi treballeu.**
+
+El repositori ja té dues branques de treball, `backend` i `frontend`, creades a partir de l’esquelet.
+
+## Com començar
+
+```bash
+git clone https://github.com/AlbertProfe/ifcd0021-26-prova-practica.git
+cd ifcd0021-26-prova-practica
+```
+
+Per treballar el backend (activitats 2, 3 i 4):
+
+```bash
+git checkout backend
+```
+
+Per treballar el frontend (activitat 5):
+
+```bash
+git checkout frontend
+```
+
+Feu commits a cada branca amb els vostres canvis. Si en algún moment no veieu les branques, creeu-les vosaltres des de `master`:
+
+```bash
+git checkout master
+git checkout -b backend
+git checkout master
+git checkout -b frontend
+```
+
+## Com executar l’esquelet
+
+Backend:
+
+```bash
+cd boot
+mvn spring-boot:run
+```
+
+L’API queda a `http://localhost:8080`. La consola H2, a `http://localhost:8080/h2-console`.
+
+Frontend:
+
+```bash
+cd react
+npm install
+npm run dev
+```
+
+## Les 5 activitats
+
+### Activitat 1 (MF01) — Git: branques i `git archive`
+
+Treballeu a les branques `backend` i `frontend` (deixeu `master` amb l’esquelet). Al final, des de l’arrel del repositori, genereu els dos zips:
+
+```bash
+git archive --format=zip -o Cognom_backend.zip backend
+git archive --format=zip -o Cognom_frontend.zip frontend
+```
+
+Canvieu `Cognom` pel vostre primer cognom, sense espais ni accents (exemple: `Romero_backend.zip`).
+
+**Pregunta (amb les vostres paraules):** Per què els equips fan servir branques en lloc de treballar tots a `main` (o `master`)?
+
+### Activitat 2 (MF02) — Classes Java i servei
+
+A `boot/`, creeu les classes `Teacher`, `Student` i `Enrollment`, i un servei amb lògica de negoci més enllà del CRUD. Exemples vàlids: no permetre una matrícula duplicada, un màxim d’estudiants per professor, o llistar els estudiants d’un professor.
+
+**Pregunta (amb les vostres paraules):** Què fa una capa de servei que no fa un repositori CRUD? Doneu un exemple de lògica de negoci.
+
+### Activitat 3 (MF03) — Entitats JPA i relacions
+
+Convertite les classes en entitats JPA. `Enrollment` ha de ser una `@Entity` pròpia, amb dos `@ManyToOne` (cap a `Teacher` i cap a `Student`) i un camp extra (assignatura, data o similar). Creeu els repositoris (`JpaRepository` n’hi ha prou; no calen consultes pròpies). Expliqueu per què feu servir una entitat `Enrollment` i no un `@ManyToMany` amb `@JoinTable`.
+
+**Pregunta (amb les vostres paraules):** Expliqueu una relació `@OneToMany` amb un exemple d’una aplicació real.
+
+### Activitat 4 (MF04) — API REST i Postman
+
+Creeu el controlador REST i connecteu-lo al servei, amb endpoints per a les matrícules (enrollments). Proveu l’API amb Postman. Lliureu l’**enllaç públic** de la col·lecció de Postman: escriviu-lo al full de la prova i també al `README` de la branca `backend`.
+
+**Pregunta (amb les vostres paraules):** Què és el cicle de petició i resposta (*request/response*)? Expliqueu què passa des del client fins a la base de dades i tornada.
+
+### Activitat 5 (MF05) — Component React
+
+A `react/`, creeu un component que mostri l’array de matrícules importat de `react/src/data.js`. **No feu `fetch`** ni crideu l’API. Feu servir `useState` i un esdeveniment (per exemple, filtrar per professor o marcar una matrícula com a seleccionada).
+
+**Pregunta (amb les vostres paraules):** Què és la immutabilitat a React, i per què no s’ha de canviar l’estat directament?
+
+## Com lliurar el treball
+
+Heu d’iniciar sessió amb un compte de Google. Hi ha dos formularis (el mateix esquema que a l’avaluació contínua d’aquest curs):
+
+1. **MF01-02-03:** https://forms.gle/rkAXo279ktYZcMC27  
+   Al camp de pujada de la **Prova Pràctica** (o el camp etiquetat MF01-02-03), pugeu `Cognom_backend.zip`.
+
+2. **MF04-05:** https://forms.gle/Tyf6cw2JsTZaZxb88  
+   Al camp de pujada de la **Prova Pràctica** (o el camp etiquetat MF04-05), pugeu `Cognom_frontend.zip`.
+
+L’enllaç públic de Postman (activitat 4) no té un camp propi al formulari: poseu-lo al full de la prova i al README de la branca `backend`.
+
+No feu servir els camps d’**Avaluació Continuada** per pujar els zips d’aquesta prova.
+
+Les respostes de les cinc preguntes obertes s’escriuen al **full de la prova**, amb les vostres paraules.
+
+## Requisits tècnics
+
+- JDK 21, Maven, Node.js i npm, Git, un IDE (IntelliJ, VS Code o Eclipse).
+- Postman per provar l’API i publicar la col·lecció (activitat 4).
+- Base de dades: H2 en memòria, ja configurada a l’esquelet.

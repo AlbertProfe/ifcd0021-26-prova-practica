@@ -1,0 +1,27 @@
+# Java / Maven
+boot/target/
+boot/.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.log
+
+# Node / Vite
+react/node_modules/
+react/dist/
+react/.vite/
+
+# IDEs and OS
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Student zips (do not commit deliveries)
+*_backend.zip
+*_frontend.zip
