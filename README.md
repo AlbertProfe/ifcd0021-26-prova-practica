@@ -6,6 +6,12 @@ Data i horari: **27/11/2026, 08:30–12:30 (4 hores)**
 
 Aquest repositori és l’esquelet de partida. No comenceu el projecte de zero. Cloneu-lo, treballeu a les branques indicades i lliureu els dos zips pels formularis de Google.
 
+## Guia de l'alumne
+
+Guia visual pas a pas, des de clonar el repositori fins a pujar els zips: [Student guide: From clone to upload](https://albertprofe.dev/images/ifcd0021-26/docs/student-guide/Main.dc.html)
+
+[![Student guide](docs/images/student-guide.png)](https://albertprofe.dev/images/ifcd0021-26/docs/student-guide/Main.dc.html)
+
 ## Contingut del repositori
 
 - `boot/` — projecte **Spring Boot** (Maven, Java 21, H2). És on feu les activitats 2, 3 i 4 (MF02, MF03 i MF04).
